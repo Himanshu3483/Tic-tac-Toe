@@ -1,0 +1,85 @@
+/* Reset CSS for body and html to ensure full height */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling */
+  background-color: #74ebd5; /* Solid background color */
+}
+
+/* Container for the entire board */
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Add padding around the board */
+  border-radius: 10px; /* Rounded corners for the container */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  background-color: #ffffff; /* White background for the game container */
+  /* Optional: You can choose a different color, e.g., #f9f9f9 for a subtle shade */
+}
+
+/* Styling for each row of squares */
+.board-row {
+  display: flex;
+}
+
+/* Styling for individual squares */
+.square {
+  width: 60px; /* Square size */
+  height: 60px; /* Square size */
+  font-size: 24px; /* Font size for X/O */
+  margin: 5px; /* Space between squares */
+  cursor: pointer;
+  background-color: #f0f0f0; /* Color of squares */
+  border: 2px solid #ccc; /* Border to define squares */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background and transform */
+}
+
+/* Change background color on hover */
+.square:hover {
+  background-color: #ddd; /* Change color on hover */
+}
+
+/* Animate square fill */
+.square.filled {
+  transform: scale(1.1); /* Slightly increase size on fill */
+  transition: transform 0.2s; /* Smooth transition for scale */
+}
+
+/* Styling for status messages */
+.status {
+  margin-top: 20px; /* Space above status messages */
+  font-size: 20px; /* Font size for status */
+  font-weight: bold; /* Bold font for visibility */
+}
+
+/* Styling for the reset button */
+.reset-button {
+  margin-top: 10px; /* Space above reset button */
+  padding: 10px 20px; /* Padding for button */
+  font-size: 16px; /* Font size for button */
+  cursor: pointer;
+  background-color: #28a745; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners for button */
+  transition: background-color 0.3s; /* Smooth transition for button color */
+}
+
+/* Change background color on hover for the button */
+.reset-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Styling for the scoreboard */
+.scoreboard {
+  margin-top: 20px; /* Space above the scoreboard */
+  font-size: 18px; /* Font size for the scoreboard */
+}
